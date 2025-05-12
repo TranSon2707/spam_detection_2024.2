@@ -1,0 +1,17 @@
+test_percentage: 0.5
+Accuracy: 0.9848823452083607
+
+Classification Report:      
+              precision    recall  f1-score   support
+
+         0.0       0.98      0.99      0.99      7924
+         1.0       0.99      0.98      0.98      7290
+
+    accuracy                           0.98     15214
+   macro avg       0.99      0.98      0.98     15214
+weighted avg       0.98      0.98      0.98     15214
+
+The Naive Bayes model demonstrates strong performance in spam email detection, achieving an overall accuracy of 98.49% on the test set (split ratio: 50%). 
+The classification report reveals balanced precision and recall scores for both classes as well as a high F1-score indicating robustness in handling false positives and negatives. 
+The near-identical macro and weighted averages (0.98–0.99) further confirm consistent performance across classes, suggesting Naive Bayes is well-suited for this binary classification task despite its simplicity. 
+Potential limitations (e.g., skewed datasets or feature dependencies) should be investigated in future work.
