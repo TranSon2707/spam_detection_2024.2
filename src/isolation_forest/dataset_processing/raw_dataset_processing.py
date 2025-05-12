@@ -1,6 +1,12 @@
 import pandas as pd
 
-df = pd.read_csv('Dataset/raw/processed_data.csv')
+"""constants"""
+RAW_PATH = 'dataset/isolation_forest_data/raw/'
+FINAL_PATH = 'dataset/isolation_forest_data/final/'
+
+
+
+df = pd.read_csv(RAW_PATH + 'processed_data.csv')
 
 df_cleaned = df.drop('message', axis = 'columns')
 
@@ -22,7 +28,7 @@ train_1 = pd.concat([
     df_normal.iloc[:num_norm1]
 ], ignore_index=True)
 
-train_1.to_csv('Dataset/final/training_dataset_1.csv', index=False)
+train_1.to_csv(FINAL_PATH + 'training_dataset_1.csv', index=False)
 
 # Dataset 2: 5000 spam / 12500 ham
 num_anom2 = 5000
@@ -33,7 +39,7 @@ train_30 = pd.concat([
     df_normal.iloc[:num_norm2]
 ], ignore_index=True)
 
-train_30.to_csv('Dataset/final/training_dataset_2.csv', index=False)
+train_30.to_csv(FINAL_PATH + 'training_dataset_2.csv', index=False)
 
 # Create testing dataset (lines haven't used in Dataset 1)
 
@@ -44,4 +50,4 @@ remaining_anom = df_anomalies.drop(index=used_anom_indices)
 remaining_norm = df_normal.drop(index=used_norm_indices)
 
 testing_dataset = pd.concat([remaining_anom, remaining_norm], ignore_index=True)
-testing_dataset.to_csv('Dataset/final/testing_dataset.csv', index=False)
+testing_dataset.to_csv(FINAL_PATH + 'testing_dataset.csv', index=False)

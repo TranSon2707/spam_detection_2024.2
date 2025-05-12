@@ -54,7 +54,7 @@ predicts_dataset_2 = isoForest_dataset_2.predict(X_test)  # -1 prediction label 
 '''---------------'''
 
 # Load true labels from testing dataset
-df_test = pd.read_csv('Dataset/final/testing_dataset.csv')
+df_test = pd.read_csv('dataset\\isolation_forest_data\\final\\testing_dataset.csv')
 y_test = df_test['label']
 
 # Convert predicts from {-1, 1} to {1, 0}
