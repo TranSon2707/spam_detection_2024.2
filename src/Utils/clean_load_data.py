@@ -2,7 +2,7 @@ import pandas as pd
 
 
 """Constants"""
-TRAINING_CSV_PATH = 'Dataset/enron_spam_data.csv'
+TRAINING_CSV_PATH = 'dataset/enron_spam_data.csv'
 
 def clean_df(df):
 
