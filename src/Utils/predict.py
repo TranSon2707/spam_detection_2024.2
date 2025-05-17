@@ -48,7 +48,7 @@ def main_predict():
 
 
     if input_method == '2' or input_method.lower() == 'txt':
-        input_file = input("Enter the path to the .txt file: ")
+        input_file = input("Enter the path to the .txt file: ").rstrip('.txt') + '.txt'
         with open(input_file, 'r') as f:
             email_text = f.read()
         
@@ -65,21 +65,21 @@ def main_predict():
 
 
     if input_method == '3' or input_method.lower() == 'csv':
-        input_file = input("Enter the path to the .csv file: ")
+        input_file = input("Enter the path to the .csv file: ").rstrip('.csv') + '.csv'
         df = pd.read_csv(input_file)
         
         if '1' in input_model or 'bayes' in input_model:
             print("Bayes Model Prediction:")
             for index, row in df.iterrows():
                 print(f"Email {index}:", end=" ")
-                predict_email(row[0], model='bayes')
+                predict_email(row.iloc[0], model='bayes')
         if '2' in input_model or 'isolation_forest' in input_model:
             print("Isolation Forest Model Prediction:")
             for index, row in df.iterrows():
                 print(f"Email {index}:", end=" ")
-                predict_email(row[0], model='isolation_forest')
+                predict_email(row.iloc[0], model='isolation_forest')
         if '3' in input_model or 'logistic_regression' in input_model:
             print("Logistic Regression Model Prediction:")
             for index, row in df.iterrows():
                 print(f"Email {index}:", end=" ")
-                predict_email(row[0], model='logistic_regression')
+                predict_email(row.iloc[0], model='logistic_regression')

@@ -39,7 +39,7 @@ run the main file
   or use multiple models by adding ' ' between each numbers. Ex: '1  2 3'
 - and then choose a number 1/2/3 to use each type of input via by hand or .txt file or .csv file
   .txt file should contain the entirety of the email 
-  .csv file should contain a column of emails
+  .csv file should contain a column of emails in the first column
 
 # dataset 
 contains the dataset used in the model 
