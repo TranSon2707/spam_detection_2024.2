@@ -38,11 +38,12 @@ run the main file
 - you can choose a number 1/2/3 to use each model 
   or use multiple models by adding ' ' between each numbers. Ex: '1  2 3'
 - and then choose a number 1/2/3 to use each type of input via by hand or .txt file or .csv file
-  .txt file should contain the entirety of the email 
-  .csv file should contain a column of emails in the first column
+  .txt file should contain the ENTIRTY of the email 
+  .csv file should contain a table (the first row is the title/header) of which FIRST COLUMN is the email content 
 
 # dataset 
 contains the dataset used in the model 
+
 for isolation_forest
 - Training data was constructed with a **low proportion of anomalies** to align with the Isolation Forest assumption: anomalies are "few and different".  
   A separate testing set was built from the remaining samples.  
