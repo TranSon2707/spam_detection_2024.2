@@ -67,7 +67,9 @@ def main_predict():
     if input_method == '3' or input_method.lower() == 'csv':
         input_file = input("Enter the path to the .csv file: ").rstrip('.csv') + '.csv'
         df = pd.read_csv(input_file)
-        
+        with open(input_file, 'r') as f:
+            email_text = f.read()
+
         if '1' in input_model or 'bayes' in input_model:
             print("Bayes Model Prediction:")
             for index, row in df.iterrows():
