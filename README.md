@@ -31,6 +31,23 @@ after you clone the project, right click on the .rar files in the dataset, isola
 
 
 
+## requirements
+Python libraries: sklearn (scikit-learn), nltk, pandas, numpy, joblib
+
+
+## Installation Instructions
+
+# For Linux/macOS (using setup.sh):
+Open terminal, navigate to the project directory. Run:
+  chmod +x setup.sh
+  ./setup.sh
+
+# For Windows (using setup.bat):
+Open Command Prompt (cmd) or PowerShell, navigate to the project directory. Run:
+  setup.bat
+
+
+
 ## directories
 
 # main.py
@@ -58,3 +75,7 @@ contains the .txt file for the output of each model
 
 # src 
 contains the source code of the project used for (preprocess/clean/load data in the Utils folder, training modelsk)
+
+# test email
+used for testing the main.py file 
+
