@@ -39,12 +39,12 @@ Python libraries: sklearn (scikit-learn), nltk, pandas, numpy, joblib
 
 # For Linux/macOS (using setup.sh):
 Open terminal, navigate to the project directory. Run:
-  chmod +x setup.sh
-  ./setup.sh
+chmod +x setup.sh
+./setup.sh
 
 # For Windows (using setup.bat):
 Open Command Prompt (cmd) or PowerShell, navigate to the project directory. Run:
-  setup.bat
+setup.bat
 
 
 
